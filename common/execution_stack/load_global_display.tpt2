@@ -1,10 +1,16 @@
-
-global.int.set("<size=0>global display<size", 15)
-global.int.set("><mspace=9>global display", 0)
+global.string.set("<size=0>hidden", "</size><size=15><mspace=9>global display")
 
 global.int.set("cycle_counter", 0)
 
 global.double.set("delta_time", 0.)
 global.double.set("timestamp", 0.)
 
-global.int.set("</mspace></size>global display", 0)
+global.string.set("</mspace></size><size=0>hidden section", "")
+; Pre-declare variables we don't want to see
+global.int.set("start_load", 0)
+global.int.set("executing", 0)
+global.int.set("max_freeze", 0)
+global.int.set("current_step", 0)
+global.int.set("current_package", 0)
+
+global.string.set("end hidden section", "</size>")
